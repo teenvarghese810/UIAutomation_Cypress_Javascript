@@ -1,5 +1,5 @@
 {
-  "name": "cypressautomation",
+  "name": "y",
   "version": "1.0.0",
   "description": "Technical test for moneycorp",
   "main": "index.js",
@@ -9,9 +9,17 @@
   "author": "Teena",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.3.0"
+    "cypress": "^12.4.0"
   },
   "devDependencies": {
     "cypress-xpath": "^2.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teenvarghese810/UIAutomation_Cypress_Javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teenvarghese810/UIAutomation_Cypress_Javascript/issues"
+  },
+  "homepage": "https://github.com/teenvarghese810/UIAutomation_Cypress_Javascript#readme"
 }
