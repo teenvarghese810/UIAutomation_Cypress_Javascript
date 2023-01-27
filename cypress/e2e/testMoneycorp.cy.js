@@ -1,5 +1,5 @@
-describe('Language Dropdown validations', () => {
-    it.only("Validate the dropdown option selection by it's text", () => {
+describe('Moneycorp UI validations', () => {
+    it.only("Moneycorp UI validations", () => {
         
         //Open webpage to test
         cy.visit("https://www.moneycorp.com/en-gb/")
@@ -24,22 +24,9 @@ describe('Language Dropdown validations', () => {
         cy.get("[aria-label='Menu']").click()
         cy.get("#nav_search").type("International Payments")
         .parent().find("[type='submit']").click()
-        /* cy.xpath('//div[contains(@class, "nav-search-bar")]').find("input").first().invoke('show').type("International Payments", {force: true})
-            cy.xpath('//div[contains(@class,"u-flex u-flex-align-center u-flex-justify-end")]').find('form').within(() => {
-            cy.get('[type="submit"]').invoke('show')
-            cy.wait(1000)
-            cy.get('[type="submit"]').type("International Payments", {force: true})
-            cy.wait(1000)
-            cy.get('[type="submit"]').click({force: true})
-        }) */
 
         //Verify Search result page is displayed for "International Payments"
         cy.title().should('eq', 'Search')
-
-        //Verify the Search result URLs contain "/en-us/" -- either using DOM
-        cy.get('.results').find("a").each(($el) => {
-            cy.wrap($el).should('have.attr', "href").should("contain", "/en-us/")
-        })
 
         //Or Click each link and check the URL contains https://www.moneycorp.com/en-us
         cy.get('.results').find("a").each(($el) => {
